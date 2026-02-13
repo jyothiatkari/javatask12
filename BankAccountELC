@@ -1,0 +1,29 @@
+package package1;
+import java.util.Scanner;
+public class BankAccountELC {
+
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		BankAccount b2=new BankAccount();
+		System.out.println("Enter your account number");
+		int acc=s.nextInt();
+		System.out.println("Enter your account holder name");
+		String name=s.next();
+		System.out.println("Enter your balance");
+		int balance=s.nextInt();
+	    BankAccount b=new BankAccount(acc,name,balance);
+	     b.display();
+	    System.out.println("*************************");
+	    System.out.println("Enter your account number");
+		int acc1=s.nextInt();
+		System.out.println("Enter your account holder name");
+		String name1=s.next();
+	   BankAccount b1=new BankAccount(acc1,name1);
+	   b1.display();
+	   System.out.println("**************************");
+	   b.Deposite(12000);
+	  s.close();
+	 
+	}
+
+}
