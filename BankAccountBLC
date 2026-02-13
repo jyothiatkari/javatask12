@@ -1,0 +1,39 @@
+package package1;
+
+public class BankAccount {
+    private int AccNo;
+    private String AccName;
+    private int balance;
+    
+    public BankAccount() {
+    	System.out.println("This is default constructor");
+    }
+  
+   public BankAccount(int AccNo,String AccName,int balance) {
+	   this.AccNo=AccNo;
+	   this.AccName=AccName;
+	   this.balance=balance;
+   }
+   public BankAccount(int AccNo,String AccName) {
+	   this.AccNo=AccNo;
+	   this.AccName=AccName;
+   }
+   
+   public void Deposite(int deposite) {
+	   
+	   if(deposite>=100) {
+		   balance=deposite+balance;
+		   System.out.println("deposited amount is"+deposite);
+		   System.out.println("Balance updated to"+balance);
+		   }
+		   else {
+			   System.out.println("Minimum amount to deposite should be more than 100");
+		   } 
+   }
+public void display() {
+	System.out.println("account number is "+AccNo);
+	System.out.println(" account name is "+AccName);
+	System.out.println("account balance "+balance);
+}
+}
+
